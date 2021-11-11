@@ -5,7 +5,7 @@
 
 <br/>
 
-This is a solution template for creating a Razor Page App with ASP.NET Core following the principles of Clean Architecture. With this architecture you can build Razor Page-based web applications efficiently and quickly. 
+This is a solution template for create Razor Pages Application with ASP.NET Core(6.0) following the principles of Clean Architecture. With this architecture you can build base-on Razor Pages web applications efficiently and quickly. 
 
 ## Learn about Clean Architecture
 
