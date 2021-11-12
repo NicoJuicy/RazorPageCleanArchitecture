@@ -1,27 +1,20 @@
-// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 
-namespace CleanArchitecture.Razor.Infrastructure.Localization;
+namespace CleanArchitecture.Razor.Infrastructure.Middlewares;
 
-public static class RequestLocalizationCookiesMiddlewareExtensions
-{
-    public static IApplicationBuilder UseRequestLocalizationCookies(this IApplicationBuilder app)
-    {
-        app.UseMiddleware<RequestLocalizationCookiesMiddleware>();
-        return app;
-    }
-}
-
-public class RequestLocalizationCookiesMiddleware : IMiddleware
+public class LocalizationCookiesMiddleware : IMiddleware
 {
     public CookieRequestCultureProvider Provider { get; }
 
-    public RequestLocalizationCookiesMiddleware(IOptions<RequestLocalizationOptions> requestLocalizationOptions)
+    public LocalizationCookiesMiddleware(IOptions<RequestLocalizationOptions> requestLocalizationOptions)
     {
         Provider =
             requestLocalizationOptions

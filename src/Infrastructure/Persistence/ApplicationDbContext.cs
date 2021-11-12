@@ -39,7 +39,7 @@ public class ApplicationDbContext : IdentityDbContext<
         _domainEventService = domainEventService;
         _dateTime = dateTime;
     }
-    public DbSet<Serilog> Serilogs { get; set; }
+    public DbSet<Logger> Loggers { get; set; }
     public DbSet<AuditTrail> AuditTrails { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<DocumentType> DocumentTypes { get; set; }
@@ -47,7 +47,7 @@ public class ApplicationDbContext : IdentityDbContext<
 
     public DbSet<KeyValue> KeyValues { get; set; }
     public DbSet<ApprovalData> ApprovalDatas { get; set; }
-
+    public DbSet<Product> Products { get; set; }
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
         var auditEntries = OnBeforeSaveChanges(_currentUserService.UserId);
