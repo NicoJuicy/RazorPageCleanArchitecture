@@ -11,6 +11,9 @@ This is a solution template for create Razor Pages Application with ASP.NET Core
 
 [![Clean Architecture with ASP.NET Core 3.0 • Jason Taylor • GOTO 2019](https://img.youtube.com/vi/dK4Yb6-LxAk/0.jpg)](https://www.youtube.com/watch?v=dK4Yb6-LxAk)
 
+## migrate to blazor server 
+https://github.com/neozhu/CleanArchitectureWithBlazorServer
+
 ## Demonstration [http://razor.i247365.net/](http://razor.i247365.net/)
 * default admin: administrator/123456
 * default user: demo/123456
